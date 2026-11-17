@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Percentage Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Percentage Calculator</h1>
+    <p class="sub">Pick what you want to work out, then type your numbers.</p>
+
+    <div class="tabs" role="tablist" aria-label="Calculation type">
+      <button class="tab active" role="tab" aria-selected="true" data-mode="find">Find %</button>
+      <button class="tab" role="tab" aria-selected="false" data-mode="of">% of a number</button>
+      <button class="tab" role="tab" aria-selected="false" data-mode="change">% change</button>
+    </div>
+
+    <div class="fields">
+      <label class="field">
+        <span id="labelA">Number</span>
+        <input id="inputA" type="number" inputmode="decimal" step="any" placeholder="e.g. 45">
+      </label>
+      <label class="field">
+        <span id="labelB">Out of (total)</span>
+        <input id="inputB" type="number" inputmode="decimal" step="any" placeholder="e.g. 60">
+      </label>
+    </div>
+
+    <section class="result" aria-live="polite">
+      <div id="big" class="big">—</div>
+      <p id="text" class="text">Enter both numbers to see the result.</p>
+      <div id="barWrap" class="bar" hidden>
+        <div id="barFill" class="fill"></div>
+      </div>
+    </section>
+
+    <button id="clear" class="clear" type="button">Clear</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
